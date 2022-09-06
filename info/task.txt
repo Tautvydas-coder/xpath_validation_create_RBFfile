@@ -1,0 +1,21 @@
+Naudoti beatifulsoup (ar lxml - nepamenu kaip vadinas  ) patikrinti matomų elementų validaciją.
+Tai naudojant jau turimą kodą, patobulinti, kad kodas generuotų xpath tų elementų, kuriuos galima matyti puslapyje.
+Tada parašyti atskirą .py failą, kuris naudodamas tuos xpath (kurie yra csv ar kitame faile) sukurtų
+.robot failą, kuris tikrins, ar kiekvienas xpath iš to failo (csv ar kito formato) yra matomas puslapyje.
+prisegu pvz.: C:\Users\takvietk\OneDrive\Task_II
+
+Patogumo reikalas - jei tame faile (csv, ar kito formato) taip pat butų nurodytas puslapio url, kurį paskui
+naudoji robot framework, kad paleistum naršyklę xpath gali būti aprašyti kaip tau patogiau.
+
+1)	Kodas turi generuoti elementų XPATH’us, kuriuos galima matyti puslapyje
+( ??? Tai pvz kalendoriaus dienos, jas pamatysi tik tada, kai bus paspaudziama
+ant kalendoriaus, bet HTML bus XPATH’ai į dienas, tai ju reikia ar ne ??? nereikia, tik taip kaip puslapis matosi)
+2)	Sukurti .py skriptą, kuris išsaugotus XPATH (mano pasirinktam formate csv/json/…), sukurtų .robot failą.
+3)	.robot failas turi atrodyti taip: C:\Users\takvietk\OneDrive\Task_II
+4)	.robot failas turi tikrinti ar elementai yra matomi tinklapyje pagal nuscrapintus XPATH’us.
+    a.	ROBOT’e tikrinti element matomumą naudojami „element should be visible“.
+    b.	Visi ROBOTE esancios komandos ir dvigubi tarpai GALI BŪTI hardcode‘inti
+    c.	Ideja: sukurti .txt/kitokio tipo failą. Jame is anksto surasyti .robot template
+        ir kodu sumesti XPATH‘US, kaip pavyzdiniame (3ias punktas).
+5)	.robote išsaugoti naudojamo tinklapio (nuscrapinto web‘o) URL‘ą
+
