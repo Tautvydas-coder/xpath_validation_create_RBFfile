@@ -4,6 +4,8 @@ from lxml import html
 from resources.page_info import *
 import json
 from resources.variables import *
+from python_resources.fetch_data import *
+
 
 # --------SOUP-----------
 # page = requests.get(url=URL)
@@ -47,36 +49,14 @@ def write_to_json_file(json_string):
     with open(json_name, 'w') as json_file:
         json_file.write(json_string)
 
-def write_to_csv(results, tree, root, vocabulary):
-    temp = 0
-    with open(csv_name, 'w', encoding='windows-1257', errors="xmlcharrefreplace") as file:
-        file.write(column_names)
+
+def write_to_csv(results, tree):
+    xpath_list= []
+    with open(csv_name, 'w') as file:
+        file.write(column_name)
         for result in results:
             xpath = tree.getpath(result)
-            if xpath.__contains__('input') or xpath.__contains__('label'):
-                elements = root.xpath(xpath)
-                content_text = elements[0].text
-                if elements[0].get('type') in vocabulary:
-                    atr_type = elements[0].get('type')
-                    file.write("type" + "," + atr_type + "," + "/" + xpath)
-                    temp += 1
-                    if temp < 4: file.write(",")
-                elif elements[0].get('id') in vocabulary:
-                    atr_id = elements[0].get('id')
-                    file.write("id" + "," + atr_id + "," + "/" + xpath)
-                    temp += 1
-                    if temp < 4: file.write(",")
-                elif elements[0].get('class') in vocabulary:
-                    atr_class = elements[0].get('class')
-                    file.write("class" + "," + atr_class + "," + "/" + xpath)
-                    temp += 1
-                    if temp < 4: file.write(",")
-                elif elements[0].get('placeholder') in vocabulary:
-                    atr_placeholder = elements[0].get('placeholder')
-                    file.write("placeholder" + "," + atr_placeholder + "," + "/" + xpath)
-                    temp += 1
-                    if temp < 4: file.write(",")
-                if content_text in vocabulary:
-                    file.write(content_text + "," + "/" + xpath)
-                    temp += 1
-                    if temp < 4: file.write(",")
+            if not xpath.__contains__('script') and not xpath.__contains__('plusone'):
+                file.write(f"{xpath}\n")
+                xpath_list.append(xpath)
+    return xpath_list
