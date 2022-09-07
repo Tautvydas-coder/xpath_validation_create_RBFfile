@@ -8,9 +8,7 @@ HEADERS = {
 
 def check_web_status():
     page = requests.get(url=URL)
-    print(page.status_code)
     if page.status_code == 403:
-        print(page.status_code)
         page = requests.get(url=URL, headers=HEADERS)
         print(page)
     return page

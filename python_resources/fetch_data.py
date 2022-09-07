@@ -1,7 +1,5 @@
 import csv
-from bs4 import BeautifulSoup
 from lxml import html
-from resources.page_info import *
 import json
 from resources.variables import *
 
