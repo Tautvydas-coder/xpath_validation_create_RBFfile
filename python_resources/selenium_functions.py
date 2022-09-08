@@ -10,6 +10,7 @@ driver = webdriver.Chrome()
 driver.maximize_window()
 driver.get(URL)
 
+
 def check_element_visibility(xpath):
     try:
         element = driver.find_element(By.XPATH, xpath)
@@ -17,6 +18,7 @@ def check_element_visibility(xpath):
         return f"xpath: {xpath}, visibility: {visibility}"
     except NoSuchElementException:
         return "No Such Element"
+
 
 def close_browser():
     driver.close()
