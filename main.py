@@ -10,6 +10,7 @@ if __name__ == '__main__':
     # web_results = fetch_web_element_info(web_root)
     # write_to_csv(web_results, web_tree)
     create_robot_file()
+    # close_browser()
     # print(list)
     # check_element_visibility(list)
     # json_list = fetch_json_list()

@@ -1,3 +1,5 @@
+import os
+
 from selenium import webdriver
 from selenium.common import NoSuchElementException
 from selenium.webdriver.common.by import By
@@ -15,3 +17,7 @@ def check_element_visibility(xpath):
         return f"xpath: {xpath}, visibility: {visibility}"
     except NoSuchElementException:
         return "No Such Element"
+
+def close_browser():
+    driver.close()
+    os.system(KILL_PROC_CMD)
