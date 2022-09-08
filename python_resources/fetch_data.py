@@ -3,6 +3,7 @@ from lxml import html
 import json
 from resources.variables import *
 
+
 def fetch_page_content(web_page):
     page_content = html.fromstring(web_page.content)
     return page_content
@@ -18,18 +19,10 @@ def fetch_web_element_info(root):
     return web_elements
 
 
-def fetch_data_from_txt():
-    with open(data, 'r', encoding='utf-8') as txt:
-        contents = txt.read().splitlines()
-    return contents
+def fetch_csv():
+    with open(csv_name, 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            if row.__contains__(" visibility: True"):
+                print(row)
 
-def fetch_json_list():
-    with open(csv_name, 'r') as csv_file:
-        csv_reader = csv.DictReader(csv_file)
-        json_array = [row for row in csv_reader]
-    return json_array
-
-
-def fetch_json_format(json_list):
-    json_str = json.dumps(json_list, indent=4, ensure_ascii=False)
-    return json_str
