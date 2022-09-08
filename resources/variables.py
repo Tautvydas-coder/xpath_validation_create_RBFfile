@@ -1,7 +1,9 @@
 xpath_start = '/html/body//*'
 csv_name = 'outputs/CSV_xpaths.csv'
 json_name = 'outputs/JSON_xpaths.json'
+robot_name = 'outputs/robot_code.robot'
 data = 'inputs/vocabulary.txt'
+KILL_PROC_CMD = 'taskkill /f /im chromedriver.exe'
 column_name= "XPATHS:\n"
 URL = 'https://www.messenger.com/'
 # URL = 'https://demoqa.com/login'
