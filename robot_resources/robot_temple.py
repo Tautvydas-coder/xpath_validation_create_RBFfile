@@ -1,4 +1,4 @@
-from resources.variables import  *
+from resources.variables import *
 
 settings_variable_temple = """*** Settings ***
 Library  SeleniumLibrary
@@ -9,14 +9,12 @@ Test Teardown  Close Browser
 \n"""
 
 test_cases_temple = f"""*** Test Cases ***
-Valid page elements
-    element should be visible  {xpath[0]}
-    element should be visible  {xpath[1]}
-    element should be visible  xpath
-    element should be visible  xpath
-    element should be visible  xpath
-    element should be visible  xpath
-    element should be visible  xpath\n"""
+Valid page elements """
+
+
+def printing(xpaths):
+    return f"element should be visible  {xpaths}"
+
 
 keyword_temple = """*** Keywords ***
 Open Chrome
