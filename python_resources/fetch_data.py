@@ -2,7 +2,7 @@ import csv
 from lxml import html
 import json
 from resources.variables import *
-from robot_resources.robot_temple import printing
+
 
 
 def fetch_page_content(web_page):
@@ -21,8 +21,10 @@ def fetch_web_element_info(root):
 
 
 def fetch_csv():
+    visible_xpaths_list = []
     with open(csv_name, 'r') as file:
         reader = csv.reader(file)
         for row in reader:
             if row.__contains__(" visibility: True"):
-                printing(row[0])
+                visible_xpaths_list.append(row[0])
+    return visible_xpaths_list
