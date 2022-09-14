@@ -7,4 +7,3 @@ def create_robot_file(settings_variable_temple, visible_xpaths_list, test_cases_
         for xpath in visible_xpaths_list:
             robot_file.write(f"   Element Should Be Visible  {xpath}\n")
         robot_file.write(keyword_temple)
-
