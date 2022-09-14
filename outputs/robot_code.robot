@@ -6,14 +6,6 @@ Test Teardown  Close Browser
 *** Variables ***
 
 *** Test Cases ***
-Valid page elements
-    element should be visible  sdsa
-    element should be visible  dads
-    element should be visible  xpath
-    element should be visible  xpath
-    element should be visible  xpath
-    element should be visible  xpath
-    element should be visible  xpath
-*** Keywords ***
+Valid page elements *** Keywords ***
 Open Chrome
     Open Browser    ${URL}  ${BROWSER}
