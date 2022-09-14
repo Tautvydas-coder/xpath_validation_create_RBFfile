@@ -16,7 +16,7 @@ def check_element_visibility(xpath):
     try:
         element = driver.find_element(By.XPATH, xpath)
         visibility = element.is_displayed()
-        return f"xpath: {xpath}, visibility: {visibility}"
+        return f"xpath:{xpath},visibility:{visibility}"
     except NoSuchElementException:
         return "No Such Element"
 

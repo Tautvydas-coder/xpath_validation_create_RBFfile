@@ -9,12 +9,7 @@ Test Teardown  Close Browser
 \n"""
 
 test_cases_temple = f"""*** Test Cases ***
-Valid page elements """
-
-
-def printing(xpaths):
-    return f"element should be visible  {xpaths}"
-
+Valid page elements \n"""
 
 keyword_temple = """*** Keywords ***
 Open Chrome
