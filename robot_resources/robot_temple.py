@@ -9,7 +9,7 @@ Test Teardown  Close Browser
 \n"""
 
 test_cases_temple = f"""*** Test Cases ***
-Valid page elements \n"""
+Valid page elements\n"""
 
 keyword_temple = """*** Keywords ***
 Open Chrome

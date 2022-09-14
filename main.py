@@ -17,4 +17,3 @@ if __name__ == '__main__':
     # printing(visible_xpaths)
     # print(list)
     # check_element_visibility(list)
-    # write_to_json_file(json_string)
