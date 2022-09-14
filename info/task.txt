@@ -12,11 +12,11 @@ naudoji robot framework, kad paleistum naršyklę xpath gali būti aprašyti kai
 ant kalendoriaus, bet HTML bus XPATH’ai į dienas, tai ju reikia ar ne ??? nereikia, tik taip kaip puslapis matosi) +
 2)	a)  Sukurti .py skriptą, kuris išsaugotus XPATH (mano pasirinktam formate csv/json/…) +
     b)  .py sukurtų .robot failą. +
-3)	.robot failas turi atrodyti taip: C:\Users\takvietk\OneDrive\Task_II
-4)	.robot failas turi tikrinti ar elementai yra matomi tinklapyje pagal nuscrapintus XPATH’us.
-    a.	ROBOT’e tikrinti element matomumą naudojami „element should be visible“.
-    b.	Visi ROBOTE esancios komandos ir dvigubi tarpai GALI BŪTI hardcode‘inti
+3)	.robot failas turi atrodyti taip: C:\Users\takvietk\OneDrive\Task_II +
+4)	.robot failas turi tikrinti ar elementai yra matomi tinklapyje pagal nuscrapintus XPATH’us. +
+    a.	ROBOT’e tikrinti element matomumą naudojami „element should be visible“. +
+    b.	Visi ROBOTE esancios komandos ir dvigubi tarpai GALI BŪTI hardcode‘inti +
     c.	Ideja: sukurti .txt/kitokio tipo failą. Jame is anksto surasyti .robot template
-        ir kodu sumesti XPATH‘US, kaip pavyzdiniame (3ias punktas).
+        ir kodu sumesti XPATH‘US, kaip pavyzdiniame (3ias punktas). +
 5)	.robote išsaugoti naudojamo tinklapio (nuscrapinto web‘o) URL‘ą
 

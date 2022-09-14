@@ -1,8 +1,6 @@
-from resources.variables import *
-
 settings_variable_temple = """*** Settings ***
 Library  SeleniumLibrary
-Variables  
+Variables
 Test Setup  Open Browser    ${URL}  ${BROWSER}
 Test Teardown  Close Browser
 *** Variables ***

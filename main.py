@@ -13,6 +13,3 @@ if __name__ == '__main__':
     close_browser()
     visible_xpaths_list = fetch_csv()
     create_robot_file(settings_variable_temple, visible_xpaths_list, test_cases_temple, keyword_temple)
-    # printing(visible_xpaths)
-    # print(list)
-    # check_element_visibility(list)

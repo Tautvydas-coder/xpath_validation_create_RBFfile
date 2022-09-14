@@ -1,10 +1,6 @@
 import csv
-import time
-
 from lxml import html
-import json
 from resources.variables import *
-
 
 
 def fetch_page_content(web_page):
@@ -29,5 +25,4 @@ def fetch_csv():
         for row in reader:
             if row.__contains__("visibility:True"):
                 visible_xpaths_list.append(row[0])
-    print(visible_xpaths_list)
     return visible_xpaths_list
