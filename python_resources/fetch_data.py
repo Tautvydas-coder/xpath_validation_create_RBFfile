@@ -2,6 +2,7 @@ import csv
 from lxml import html
 import json
 from resources.variables import *
+from robot_resources.robot_temple import printing
 
 
 def fetch_page_content(web_page):
@@ -24,5 +25,4 @@ def fetch_csv():
         reader = csv.reader(file)
         for row in reader:
             if row.__contains__(" visibility: True"):
-                print(row)
-
+                printing(row[0])
