@@ -1,7 +1,7 @@
 from python_resources.fetch_data import *
-from python_resources.general_functions import *
+from python_resources.create_robot_file import *
 from python_resources.write_data import *
-from resources.page_info import check_web_status
+from resources.page_status import check_web_status
 from robot_resources.robot_temple import *
 
 if __name__ == '__main__':

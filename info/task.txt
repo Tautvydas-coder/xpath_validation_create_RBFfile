@@ -18,5 +18,5 @@ ant kalendoriaus, bet HTML bus XPATH’ai į dienas, tai ju reikia ar ne ??? ner
     b.	Visi ROBOTE esancios komandos ir dvigubi tarpai GALI BŪTI hardcode‘inti +
     c.	Ideja: sukurti .txt/kitokio tipo failą. Jame is anksto surasyti .robot template
         ir kodu sumesti XPATH‘US, kaip pavyzdiniame (3ias punktas). +
-5)	.robote išsaugoti naudojamo tinklapio (nuscrapinto web‘o) URL‘ą
+5)	.robote išsaugoti naudojamo tinklapio (nuscrapinto web‘o) URL‘ą +
 
